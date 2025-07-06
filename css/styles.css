@@ -611,11 +611,17 @@ a:hover {
 .article-content h2 {
   margin-top: var(--space-12);
   margin-bottom: var(--space-6);
+  color: var(--color-gray-900);
+  font-size: 1.875rem;
+  font-weight: 700;
 }
 
 .article-content h3 {
   margin-top: var(--space-8);
   margin-bottom: var(--space-4);
+  color: var(--color-gray-800);
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .article-content ul,
@@ -634,6 +640,145 @@ a:hover {
   border-left: 4px solid var(--color-violet-600);
   font-style: italic;
   color: var(--color-gray-700);
+}
+
+/* Content Sections */
+.intro-paragraph {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--color-gray-700);
+  margin-bottom: var(--space-8);
+  padding: var(--space-6);
+  background: var(--color-gray-50);
+  border-radius: 0.5rem;
+}
+
+.quick-overview {
+  margin: var(--space-8) 0;
+  padding: var(--space-6);
+  background: linear-gradient(to right, var(--color-violet-50), var(--color-purple-50));
+  border-radius: 0.5rem;
+}
+
+.quick-overview h2 {
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+  color: var(--color-violet-900);
+}
+
+.overview-list {
+  list-style: none;
+  padding: 0;
+}
+
+.overview-list li {
+  position: relative;
+  padding-left: var(--space-8);
+  margin-bottom: var(--space-3);
+  color: var(--color-gray-700);
+}
+
+.overview-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--color-violet-600);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.content-section {
+  margin: var(--space-12) 0;
+}
+
+.section-content {
+  margin-bottom: var(--space-6);
+  color: var(--color-gray-700);
+  line-height: 1.75;
+}
+
+/* Data Visualizations */
+.data-visualization {
+  margin: var(--space-8) 0;
+  padding: var(--space-6);
+  background: var(--color-gray-50);
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.data-visualization svg {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Links within content */
+.internal-links,
+.external-links {
+  margin: var(--space-6) 0;
+  padding: var(--space-4);
+  background: var(--color-gray-50);
+  border-radius: 0.5rem;
+}
+
+.internal-links h3,
+.external-links h3 {
+  font-size: 1rem;
+  margin-bottom: var(--space-2);
+  color: var(--color-gray-700);
+}
+
+.internal-links ul,
+.external-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.internal-links li,
+.external-links li {
+  margin-bottom: var(--space-2);
+}
+
+.internal-link,
+.external-link {
+  color: var(--color-violet-600);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.internal-link:hover,
+.external-link:hover {
+  color: var(--color-violet-700);
+  border-bottom-color: var(--color-violet-600);
+}
+
+.external-link::after {
+  content: " ↗";
+  font-size: 0.875em;
+  opacity: 0.7;
+}
+
+/* Conclusion */
+.conclusion {
+  margin-top: var(--space-12);
+  padding: var(--space-6);
+  background: linear-gradient(to bottom, var(--color-violet-50), transparent);
+  border-radius: 0.5rem;
+}
+
+.conclusion h2 {
+  color: var(--color-violet-900);
+  margin-top: 0;
 }
 
 /* EEAT Author Box */

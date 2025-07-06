@@ -1,0 +1,19 @@
+name: odoo-static-preview
+region: fra
+static_sites:
+- build_command: echo "No build needed - static HTML"
+  environment_slug: html
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: LarryWalkerDEV/odoo-static-preview
+  name: odoo-static-site
+  output_dir: /
+  index_document: index.html
+  catchall_document: index.html
+  routes:
+  - path: /
+  - path: /odoo
+  - path: /odoo-19  
+  - path: /odoo-hosting
+  - path: /odoo-hosting-rechner.html
