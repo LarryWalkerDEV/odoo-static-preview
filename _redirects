@@ -1,0 +1,6 @@
+# Force HTTPS
+http://odoo-experten-deutschland.de/* https://odoo-experten-deutschland.de/:splat 301!
+http://www.odoo-experten-deutschland.de/* https://www.odoo-experten-deutschland.de/:splat 301!
+
+# Redirect non-www to www (optional - uncomment if preferred)
+# https://odoo-experten-deutschland.de/* https://www.odoo-experten-deutschland.de/:splat 301!
