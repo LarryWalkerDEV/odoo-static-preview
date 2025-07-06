@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Finden Sie das beste Odoo Hosting für Ihr Unternehmen. Vergleichen Sie 7 Anbieter mit transparenten Preisen. Kostenloser Rechner für deutsche Unternehmen.">
+    <meta name="keywords" content="odoo hosting rechner, odoo hosting kosten, odoo hosting vergleich, odoo hosting deutschland, odoo cloud hosting, odoo hosting preise">
+    <meta name="author" content="Odoo Experten Deutschland">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://odoo-experten-deutschland.de/odoo-hosting-rechner.html">
+    <meta property="og:title" content="Odoo Hosting Rechner 2025 | Kostenvergleich für Deutschland">
+    <meta property="og:description" content="Berechnen Sie die optimalen Hosting-Kosten für Ihr Odoo ERP System. Vergleich von 7 Anbietern mit transparenten Preisen.">
+    <meta property="og:image" content="https://tbppogohivsxgiavbnvp.supabase.co/storage/v1/object/public/odoo/Logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://odoo-experten-deutschland.de/odoo-hosting-rechner.html">
+    <meta property="twitter:title" content="Odoo Hosting Rechner 2025 | Kostenvergleich für Deutschland">
+    <meta property="twitter:description" content="Berechnen Sie die optimalen Hosting-Kosten für Ihr Odoo ERP System. Vergleich von 7 Anbietern mit transparenten Preisen.">
+    <meta property="twitter:image" content="https://tbppogohivsxgiavbnvp.supabase.co/storage/v1/object/public/odoo/Logo.png">
+
+    <title>Odoo Hosting Rechner 2025 | Kostenvergleich für Deutschland</title>
+    
+    <link rel="canonical" href="https://odoo-experten-deutschland.de/odoo-hosting-rechner.html">
+    <link rel="stylesheet" href="/css/styles.css">
+    
+    <style>
+        .calculator-container {
+            background: linear-gradient(to bottom, var(--color-gray-50), white);
+            padding-top: 6rem;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: rgba(124, 58, 237, 0.1);
+            color: var(--color-violet-700);
+            border-radius: 9999px;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .calculator-section {
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: var(--shadow-lg);
+            padding: 2rem;
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 2rem;
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--color-gray-900);
+        }
+        
+        .select-container {
+            position: relative;
+        }
+        
+        .form-select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--color-gray-300);
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            background: white;
+            appearance: none;
+            cursor: pointer;
+        }
+        
+        .form-select:focus {
+            outline: none;
+            border-color: var(--color-violet-600);
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+        }
+        
+        .slider-container {
+            position: relative;
+            margin: 1.5rem 0;
+        }
+        
+        .slider {
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            background: var(--color-gray-200);
+            outline: none;
+            appearance: none;
+            cursor: pointer;
+        }
+        
+        .slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--color-violet-600);
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .slider::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--color-violet-600);
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .slider-value {
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-violet-600);
+            margin-top: 0.5rem;
+        }
+        
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .benefit-item {
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+        
+        .consideration-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .consideration-icon {
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-md);
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: var(--color-violet-600);
+            margin-bottom: 0.25rem;
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--color-gray-600);
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            background: white;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--color-gray-200);
+        }
+        
+        .comparison-table th {
+            background: var(--color-gray-50);
+            font-weight: 600;
+        }
+        
+        .recommended-row {
+            background: rgba(124, 58, 237, 0.05);
+            border-left: 4px solid var(--color-violet-600);
+        }
+        
+        .price-cell {
+            font-weight: 700;
+            color: var(--color-violet-600);
+            font-size: 1.125rem;
+        }
+        
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .features-list li {
+            padding: 0.25rem 0;
+            font-size: 0.875rem;
+        }
+        
+        .loading-container {
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        .loading-progress {
+            width: 100%;
+            height: 8px;
+            background: var(--color-gray-200);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+        
+        .loading-bar {
+            height: 100%;
+            background: linear-gradient(to right, var(--color-violet-600), var(--color-purple-600));
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .tip-box {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .tip-title {
+            font-weight: 700;
+            color: rgb(146, 64, 14);
+            margin-bottom: 0.5rem;
+        }
+        
+        .tip-content {
+            color: rgb(180, 83, 9);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <a href="/" class="nav-logo">
+                <img src="https://tbppogohivsxgiavbnvp.supabase.co/storage/v1/object/public/odoo/Logo.png" alt="Odoo Experten Deutschland" style="height: 2.5rem;">
+            </a>
+            
+            <button class="mobile-menu-button" id="mobile-menu-button">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18" />
+                </svg>
+            </button>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/" class="nav-link">Start</a></li>
+                <li><a href="/odoo/" class="nav-link">Odoo Grundlagen</a></li>
+                <li><a href="/odoo-19/" class="nav-link">Odoo 19</a></li>
+                <li><a href="/odoo-hosting/" class="nav-link">Hosting</a></li>
+                <li><a href="/odoo-hosting-rechner.html" class="nav-link">Kostenrechner</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="calculator-container">
+        <div class="container" style="max-width: 1280px;">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div class="badge">
+                    <svg width="16" height="16" fill="currentColor">
+                        <path d="M10 2l2.09 6.47h6.81l-5.5 4.02 2.09 6.47L10 14.94l-5.5 4.02 2.09-6.47-5.5-4.02h6.81L10 2z" />
+                    </svg>
+                    <span>Kostenloser Hosting-Vergleich</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Odoo Hosting Rechner
+                </h1>
+                
+                <p class="text-xl text-gray-600" style="max-width: 48rem; margin: 0 auto;">
+                    Finden Sie die beste Hosting-Lösung für Ihr Unternehmen. 
+                    Vergleichen Sie 7 Anbieter mit transparenten Preisen.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <!-- Calculator Input -->
+                <div class="calculator-section">
+                    <h2 class="section-title">
+                        <svg width="24" height="24" fill="none" stroke="var(--color-violet-600)" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <path d="M9 9h6m-6 4h6"/>
+                        </svg>
+                        Ihre Anforderungen
+                    </h2>
+                    
+                    <form id="calculator-form">
+                        <div class="form-group">
+                            <label for="sector" class="form-label">Branche</label>
+                            <div class="select-container">
+                                <select id="sector" class="form-select" required>
+                                    <option value="">Wählen Sie Ihre Branche</option>
+                                    <option value="manufacturing">Fertigung/Produktion</option>
+                                    <option value="retail">Einzelhandel</option>
+                                    <option value="services">Dienstleistungen</option>
+                                    <option value="ecommerce">E-Commerce</option>
+                                    <option value="healthcare">Gesundheitswesen</option>
+                                    <option value="construction">Baugewerbe</option>
+                                    <option value="consulting">Beratung</option>
+                                    <option value="technology">Technologie/IT</option>
+                                    <option value="education">Bildung</option>
+                                    <option value="nonprofit">Gemeinnützig</option>
+                                </select>
+                                <svg style="position: absolute; right: 0.75rem; top: 50%; transform: translateY(-50%); pointer-events: none;" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 9l6 6 6-6"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="employees" class="form-label">Anzahl Mitarbeiter</label>
+                            <div class="slider-container">
+                                <input type="range" id="employees" class="slider" min="1" max="500" value="10" step="1">
+                                <div class="slider-value" id="employee-value">10 Mitarbeiter</div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" id="calculate-btn" class="btn btn-primary" style="width: 100%; padding: 1rem 1.5rem;" disabled>
+                            Hosting-Kosten berechnen
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Quick Benefits -->
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <!-- Benefits -->
+                    <div class="calculator-section">
+                        <h3 class="text-center font-bold mb-3">
+                            ⚡ Warum professionelles Hosting wählen?
+                        </h3>
+                        <div class="benefit-grid">
+                            <div class="benefit-item" style="background-color: rgba(59, 130, 246, 0.1); color: rgb(29, 78, 216);">
+                                <strong>24/7</strong> Support
+                            </div>
+                            <div class="benefit-item" style="background-color: rgba(34, 197, 94, 0.1); color: rgb(21, 128, 61);">
+                                <strong>GDPR</strong> Konform
+                            </div>
+                            <div class="benefit-item" style="background-color: rgba(147, 51, 234, 0.1); color: rgb(126, 34, 206);">
+                                <strong>Enterprise</strong> Features
+                            </div>
+                            <div class="benefit-item" style="background-color: rgba(245, 158, 11, 0.1); color: rgb(180, 83, 9);">
+                                <strong>Backup</strong> Inklusive
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key Considerations -->
+                    <div class="calculator-section" style="background-color: rgba(124, 58, 237, 0.05);">
+                        <h3 class="font-bold mb-4">Wichtige Überlegungen</h3>
+                        <div class="consideration-item">
+                            <span class="consideration-icon">💰</span>
+                            <div>
+                                <strong>Versteckte Kosten vermeiden</strong>
+                                <p class="text-sm text-gray-600">
+                                    Self-Hosting benötigt oft €1000-3000 für Setup + laufende Entwicklerkosten
+                                </p>
+                            </div>
+                        </div>
+                        <div class="consideration-item">
+                            <span class="consideration-icon">🔒</span>
+                            <div>
+                                <strong>DSGVO-Compliance</strong>
+                                <p class="text-sm text-gray-600">
+                                    Wählen Sie Anbieter mit EU-Servern oder entsprechenden Datenschutzabkommen
+                                </p>
+                            </div>
+                        </div>
+                        <div class="consideration-item">
+                            <span class="consideration-icon">📈</span>
+                            <div>
+                                <strong>Skalierbarkeit</strong>
+                                <p class="text-sm text-gray-600">
+                                    Ihr Hosting sollte mit Ihrem Unternehmen mitwachsen können
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Statistics -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value">7</div>
+                            <div class="stat-label">Anbieter im Vergleich</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">€18</div>
+                            <div class="stat-label">Ab pro Monat</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">99.9%</div>
+                            <div class="stat-label">Uptime Garantie</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">24/7</div>
+                            <div class="stat-label">Support verfügbar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculation Progress -->
+            <div id="loading-section" class="hidden">
+                <div class="loading-container">
+                    <h3 class="text-xl font-semibold mb-4">Berechnung läuft...</h3>
+                    <div class="loading-progress">
+                        <div class="loading-bar" id="progress-bar" style="width: 0%;"></div>
+                    </div>
+                    <p class="text-gray-600" id="loading-text">Analysiere Ihre Anforderungen...</p>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results-section" class="hidden">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">
+                        Ihre persönliche Empfehlung
+                    </h2>
+                    <p class="text-lg text-gray-600" id="recommendation-text">
+                        Basierend auf Ihren Anforderungen
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Anbieter</th>
+                            <th>Monatliche Kosten</th>
+                            <th>Setup-Gebühr</th>
+                            <th>Features</th>
+                            <th>Support</th>
+                        </tr>
+                    </thead>
+                    <tbody id="comparison-tbody">
+                        <!-- Will be populated by JavaScript -->
+                    </tbody>
+                </table>
+
+                <div class="tip-box">
+                    <h3 class="tip-title">💡 Profi-Tipp</h3>
+                    <p class="tip-content">
+                        Die angezeigten Preise sind Richtwerte. Viele Anbieter bieten individuelle Pakete für größere 
+                        Unternehmen. Kontaktieren Sie die Anbieter direkt für ein maßgeschneidertes Angebot!
+                    </p>
+                </div>
+            </div>
+
+            <!-- SEO Content -->
+            <section class="py-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4">Warum einen Odoo Hosting Rechner verwenden?</h2>
+                        <p class="text-gray-600 mb-4">
+                            Die Wahl des richtigen Hosting-Anbieters für Ihr Odoo ERP-System ist entscheidend für 
+                            den Erfolg Ihrer digitalen Transformation. Unser Rechner hilft Ihnen dabei, die 
+                            optimale Lösung für Ihre spezifischen Anforderungen zu finden.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>• Transparenter Kostenvergleich</li>
+                            <li>• Berücksichtigung Ihrer Branche</li>
+                            <li>• Skalierbare Lösungen</li>
+                            <li>• DSGVO-konforme Anbieter</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4">Faktoren bei der Hosting-Auswahl</h2>
+                        <p class="text-gray-600 mb-4">
+                            Bei der Auswahl eines Odoo-Hosting-Anbieters sollten Sie verschiedene Faktoren 
+                            berücksichtigen, die über den reinen Preis hinausgehen.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>• Performance und Verfügbarkeit</li>
+                            <li>• Datenschutz und Compliance</li>
+                            <li>• Support-Qualität</li>
+                            <li>• Backup und Sicherheit</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <img src="https://tbppogohivsxgiavbnvp.supabase.co/storage/v1/object/public/odoo/Logo.png" alt="Odoo Experten Deutschland" style="height: 2.5rem; margin-bottom: 1rem;">
+                    <p class="text-gray-400">
+                        Unabhängiges Wissensportal für Odoo ERP in Deutschland.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Kategorien</h3>
+                    <ul class="footer-links">
+                        <li><a href="/odoo/" class="footer-link">Odoo Grundlagen</a></li>
+                        <li><a href="/odoo-19/" class="footer-link">Odoo 19 Features</a></li>
+                        <li><a href="/odoo-hosting/" class="footer-link">Hosting-Lösungen</a></li>
+                        <li><a href="/odoo-hosting-rechner.html" class="footer-link">Kostenrechner</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Hosting Vergleich</h3>
+                    <ul class="footer-links">
+                        <li><a href="/odoo-hosting/odoo-sh-vergleich.html" class="footer-link">Odoo.sh Bewertung</a></li>
+                        <li><a href="/odoo-hosting/cloud-vs-onpremise.html" class="footer-link">Cloud vs. On-Premise</a></li>
+                        <li><a href="/odoo-hosting/hosting-sicherheit.html" class="footer-link">Hosting Sicherheit</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Rechtliches</h3>
+                    <ul class="footer-links">
+                        <li><a href="/impressum.html" class="footer-link">Impressum</a></li>
+                        <li><a href="/datenschutz.html" class="footer-link">Datenschutzerklärung</a></li>
+                        <li><a href="/cookie-richtlinien.html" class="footer-link">Cookie-Richtlinien</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Odoo Experten Deutschland. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    <script>
+        // Hosting providers data
+        const hostingProviders = {
+            'odoo-sh': {
+                name: 'Odoo.sh (Official)',
+                basePrice: 18,
+                pricePerUser: 18,
+                setupFee: 0,
+                features: ['Offizielle Odoo Cloud', 'Automatische Updates', 'Staging-Umgebung', 'Mobile App inklusive'],
+                support: '24/7 Enterprise Support',
+                recommended: ['ecommerce', 'retail', 'services']
+            },
+            'hosting-de': {
+                name: 'Hosting.de',
+                basePrice: 25,
+                pricePerUser: 12,
+                setupFee: 50,
+                features: ['Deutsche Server', 'DSGVO-konform', 'Tägliche Backups', 'SSL-Zertifikat'],
+                support: 'Business Hours Support',
+                recommended: ['manufacturing', 'healthcare', 'consulting']
+            },
+            'hetzner': {
+                name: 'Hetzner Cloud',
+                basePrice: 15,
+                pricePerUser: 8,
+                setupFee: 0,
+                features: ['Günstige Preise', 'Deutsche Rechenzentren', 'Flexible Skalierung', 'API-Zugang'],
+                support: 'Community + Ticket Support',
+                recommended: ['technology', 'startup', 'consulting']
+            },
+            'aws': {
+                name: 'Amazon AWS',
+                basePrice: 30,
+                pricePerUser: 15,
+                setupFee: 200,
+                features: ['Globale Infrastruktur', 'Höchste Skalierbarkeit', 'Enterprise Features', 'Compliance-Tools'],
+                support: '24/7 Enterprise Support',
+                recommended: ['manufacturing', 'technology', 'ecommerce']
+            },
+            'digital-ocean': {
+                name: 'DigitalOcean',
+                basePrice: 20,
+                pricePerUser: 10,
+                setupFee: 0,
+                features: ['Entwicklerfreundlich', 'SSD-Storage', 'Load Balancer', 'Monitoring Tools'],
+                support: 'Ticket Support',
+                recommended: ['technology', 'startup', 'services']
+            },
+            'google-cloud': {
+                name: 'Google Cloud',
+                basePrice: 35,
+                pricePerUser: 16,
+                setupFee: 150,
+                features: ['Machine Learning Integration', 'Kubernetes Support', 'BigQuery Integration', 'High Performance'],
+                support: '24/7 Support (Premium)',
+                recommended: ['technology', 'analytics', 'ecommerce']
+            },
+            'microsoft-azure': {
+                name: 'Microsoft Azure',
+                basePrice: 32,
+                pricePerUser: 14,
+                setupFee: 100,
+                features: ['Office 365 Integration', 'Active Directory', 'Hybrid Cloud', 'Compliance Tools'],
+                support: '24/7 Enterprise Support',
+                recommended: ['manufacturing', 'healthcare', 'education']
+            }
+        };
+
+        // Calculator functionality
+        const calculatorForm = document.getElementById('calculator-form');
+        const sectorSelect = document.getElementById('sector');
+        const employeesSlider = document.getElementById('employees');
+        const employeeValue = document.getElementById('employee-value');
+        const calculateBtn = document.getElementById('calculate-btn');
+        const loadingSection = document.getElementById('loading-section');
+        const resultsSection = document.getElementById('results-section');
+        const progressBar = document.getElementById('progress-bar');
+        const loadingText = document.getElementById('loading-text');
+        const comparisonTbody = document.getElementById('comparison-tbody');
+        const recommendationText = document.getElementById('recommendation-text');
+
+        // Update employee count display
+        employeesSlider.addEventListener('input', function() {
+            const value = this.value;
+            employeeValue.textContent = `${value} Mitarbeiter`;
+        });
+
+        // Enable/disable calculate button
+        sectorSelect.addEventListener('change', function() {
+            calculateBtn.disabled = !this.value;
+        });
+
+        // Calculate hosting costs
+        calculatorForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const sector = sectorSelect.value;
+            const employees = parseInt(employeesSlider.value);
+            
+            if (!sector) return;
+            
+            startCalculation(sector, employees);
+        });
+
+        function startCalculation(sector, employees) {
+            // Show loading
+            loadingSection.classList.remove('hidden');
+            resultsSection.classList.add('hidden');
+            
+            // Simulate calculation progress
+            let progress = 0;
+            const progressTexts = [
+                'Analysiere Ihre Anforderungen...',
+                'Vergleiche Hosting-Anbieter...',
+                'Berechne optimale Preise...',
+                'Erstelle Empfehlungen...'
+            ];
+            
+            const interval = setInterval(() => {
+                progress += 25;
+                progressBar.style.width = progress + '%';
+                
+                if (progress <= 75) {
+                    loadingText.textContent = progressTexts[Math.floor(progress / 25)];
+                }
+                
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        showResults(sector, employees);
+                    }, 500);
+                }
+            }, 800);
+        }
+
+        function showResults(sector, employees) {
+            loadingSection.classList.add('hidden');
+            resultsSection.classList.remove('hidden');
+            
+            // Update recommendation text
+            recommendationText.textContent = `Basierend auf ${employees} Mitarbeitern in der Branche ${getSectorName(sector)}`;
+            
+            // Generate comparison table
+            const providers = Object.entries(hostingProviders);
+            let recommendedProvider = null;
+            
+            // Find recommended provider for sector
+            providers.forEach(([id, provider]) => {
+                if (provider.recommended.includes(sector)) {
+                    recommendedProvider = id;
+                }
+            });
+            
+            // If no specific recommendation, use odoo-sh as default
+            if (!recommendedProvider) {
+                recommendedProvider = 'odoo-sh';
+            }
+            
+            // Sort providers by total cost
+            const sortedProviders = providers.sort(([idA, providerA], [idB, providerB]) => {
+                const costA = calculateTotalCost(providerA, employees);
+                const costB = calculateTotalCost(providerB, employees);
+                return costA - costB;
+            });
+            
+            // Generate table rows
+            comparisonTbody.innerHTML = sortedProviders.map(([id, provider]) => {
+                const totalCost = calculateTotalCost(provider, employees);
+                const isRecommended = id === recommendedProvider;
+                
+                return `
+                    <tr class="${isRecommended ? 'recommended-row' : ''}">
+                        <td>
+                            <strong>${provider.name}</strong>
+                            ${isRecommended ? '<span style="color: var(--color-violet-600); font-size: 0.875rem;"> (Empfohlen)</span>' : ''}
+                        </td>
+                        <td class="price-cell">€${totalCost}/Monat</td>
+                        <td>€${provider.setupFee}</td>
+                        <td>
+                            <ul class="features-list">
+                                ${provider.features.slice(0, 3).map(feature => `<li>✓ ${feature}</li>`).join('')}
+                            </ul>
+                        </td>
+                        <td>${provider.support}</td>
+                    </tr>
+                `;
+            }).join('');
+            
+            // Scroll to results
+            resultsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function calculateTotalCost(provider, employees) {
+            // Simple calculation: base price + (employees * price per user)
+            // For small teams, use base price, for larger teams calculate per user
+            if (employees <= 5) {
+                return provider.basePrice;
+            } else {
+                return Math.round(provider.basePrice + (employees * provider.pricePerUser * 0.8)); // 20% volume discount
+            }
+        }
+
+        function getSectorName(sector) {
+            const sectorNames = {
+                'manufacturing': 'Fertigung/Produktion',
+                'retail': 'Einzelhandel',
+                'services': 'Dienstleistungen',
+                'ecommerce': 'E-Commerce',
+                'healthcare': 'Gesundheitswesen',
+                'construction': 'Baugewerbe',
+                'consulting': 'Beratung',
+                'technology': 'Technologie/IT',
+                'education': 'Bildung',
+                'nonprofit': 'Gemeinnützig'
+            };
+            return sectorNames[sector] || sector;
+        }
+    </script>
+</body>
+</html>
