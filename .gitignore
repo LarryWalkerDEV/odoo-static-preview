@@ -28,3 +28,13 @@ Thumbs.db
 
 # Temporary files
 *.tmp
+
+# Deployment scripts (not for production)
+auto-deploy.sh
+create-repo.sh
+deploy-github.md
+manual-deploy.sh
+
+# Backup files
+*.bak
+*.backup

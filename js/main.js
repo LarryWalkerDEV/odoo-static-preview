@@ -24,25 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollAnimations();
 });
 
-// Cookie consent management
+// Cookie consent management - moved to cookie-consent.js
 function initCookieConsent() {
-    const consent = localStorage.getItem('cookieConsent');
-    if (!consent) {
-        const cookieConsent = document.getElementById('cookie-consent');
-        if (cookieConsent) {
-            cookieConsent.style.display = 'block';
-        }
-    }
-}
-
-function acceptCookies() {
-    localStorage.setItem('cookieConsent', 'accepted');
-    document.getElementById('cookie-consent').style.display = 'none';
-}
-
-function rejectCookies() {
-    localStorage.setItem('cookieConsent', 'rejected');
-    document.getElementById('cookie-consent').style.display = 'none';
+    // Legacy function kept for compatibility
+    // New cookie consent system handles this automatically
 }
 
 // Load popular articles for footer

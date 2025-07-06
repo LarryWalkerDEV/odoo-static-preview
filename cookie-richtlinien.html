@@ -310,35 +310,86 @@
     <!-- Scripts -->
     <script src="/js/main.js"></script>
     <script>
+        // Connect to the new cookie consent system
         function savePreferences() {
             const functional = document.getElementById('functional-cookies').checked;
             const analytics = document.getElementById('analytics-cookies').checked;
             
-            localStorage.setItem('cookieConsent', 'custom');
-            localStorage.setItem('functionalCookies', functional);
-            localStorage.setItem('analyticsCookies', analytics);
+            // Use the new cookie consent system
+            window.acceptSelectedCookies = function() {
+                const consent = {
+                    necessary: true,
+                    functional: functional,
+                    analytics: analytics,
+                    marketing: false // No marketing toggle on this page
+                };
+                
+                // Use the cookie consent system's setConsent function
+                const data = {
+                    timestamp: new Date().toISOString(),
+                    categories: consent,
+                    version: '1.0'
+                };
+                
+                const expires = new Date();
+                expires.setTime(expires.getTime() + (365 * 24 * 60 * 60 * 1000));
+                document.cookie = 'cookie_consent=' + JSON.stringify(data) + ';expires=' + expires.toUTCString() + ';path=/;SameSite=Lax;Secure';
+                
+                showToast('Cookie-Einstellungen gespeichert!');
+            };
             
-            showToast('Cookie-Einstellungen gespeichert!');
+            window.acceptSelectedCookies();
         }
         
         function acceptAll() {
             document.getElementById('functional-cookies').checked = true;
             document.getElementById('analytics-cookies').checked = true;
             
-            localStorage.setItem('cookieConsent', 'accepted');
-            localStorage.setItem('functionalCookies', 'true');
-            localStorage.setItem('analyticsCookies', 'true');
+            const consent = {
+                necessary: true,
+                functional: true,
+                analytics: true,
+                marketing: true
+            };
+            
+            const data = {
+                timestamp: new Date().toISOString(),
+                categories: consent,
+                version: '1.0'
+            };
+            
+            const expires = new Date();
+            expires.setTime(expires.getTime() + (365 * 24 * 60 * 60 * 1000));
+            document.cookie = 'cookie_consent=' + JSON.stringify(data) + ';expires=' + expires.toUTCString() + ';path=/;SameSite=Lax;Secure';
             
             showToast('Alle Cookies akzeptiert!');
         }
         
-        // Load existing preferences
+        // Load existing preferences from the new system
         document.addEventListener('DOMContentLoaded', function() {
-            const functional = localStorage.getItem('functionalCookies') === 'true';
-            const analytics = localStorage.getItem('analyticsCookies') === 'true';
+            function getCookie(name) {
+                const nameEQ = name + '=';
+                const ca = document.cookie.split(';');
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
             
-            document.getElementById('functional-cookies').checked = functional;
-            document.getElementById('analytics-cookies').checked = analytics;
+            const consent = getCookie('cookie_consent');
+            if (consent) {
+                try {
+                    const data = JSON.parse(consent);
+                    if (data.categories) {
+                        document.getElementById('functional-cookies').checked = data.categories.functional || false;
+                        document.getElementById('analytics-cookies').checked = data.categories.analytics || false;
+                    }
+                } catch (e) {
+                    console.error('Error parsing cookie consent:', e);
+                }
+            }
         });
     </script>
 </body>
