@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Test page for website components">
+    <title>Component Test - Odoo Experten Deutschland</title>
+    
+    <!-- CSS Variables (minimal version of your styles) -->
+    <style>
+        :root {
+            --color-violet-50: #f5f3ff;
+            --color-violet-100: #ede9fe;
+            --color-violet-600: #7c3aed;
+            --color-violet-700: #6d28d9;
+            --color-gray-50: #f9fafb;
+            --color-gray-100: #f3f4f6;
+            --color-gray-200: #e5e7eb;
+            --color-gray-300: #d1d5db;
+            --color-gray-600: #4b5563;
+            --color-gray-700: #374151;
+            --color-gray-900: #111827;
+        }
+        
+        body {
+            font-family: Inter, system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+        }
+        
+        .nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-gray-200);
+            position: sticky;
+            top: 0;
+            z-index: 40;
+            height: 4rem;
+        }
+        
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: 80rem;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .nav-logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--color-gray-900);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-link {
+            color: var(--color-gray-700);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .container {
+            max-width: 80rem;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .test-section {
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--color-gray-200);
+        }
+        
+        .test-section h2 {
+            color: var(--color-violet-600);
+            margin-bottom: 1rem;
+        }
+        
+        .test-content {
+            background: var(--color-gray-50);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            margin: 1rem 0;
+        }
+        
+        .status {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            margin: 0.5rem 0;
+            font-weight: 600;
+        }
+        
+        .status.success {
+            background: #dcfce7;
+            color: #166534;
+        }
+        
+        .status.error {
+            background: #fef2f2;
+            color: #dc2626;
+        }
+    </style>
+    
+    <!-- Website Components CSS -->
+    <link rel="stylesheet" href="/components/site-search.css">
+    <link rel="stylesheet" href="/components/related-articles.css">
+    <link rel="stylesheet" href="/components/social-sharing.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Odoo Experten Deutschland</a>
+            
+            <ul class="nav-links">
+                <li><a href="/" class="nav-link">Start</a></li>
+                <li><a href="/odoo/" class="nav-link">Odoo Grundlagen</a></li>
+                <li><a href="/odoo-19/" class="nav-link">Odoo 19</a></li>
+                <li><a href="/odoo-hosting/" class="nav-link">Hosting</a></li>
+                <!-- Search button will be automatically added here -->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="test-section">
+                <h1>🚀 Website Components Test Page</h1>
+                <p>This page tests all three components to ensure they're working correctly.</p>
+            </div>
+
+            <div class="test-section">
+                <h2>🔍 Site Search Component</h2>
+                <div class="test-content">
+                    <p><strong>Expected:</strong> Search button added to navigation bar</p>
+                    <p><strong>Test:</strong> Press <kbd>Ctrl/Cmd + K</kbd> to open search modal</p>
+                    <div id="search-status" class="status">Checking...</div>
+                </div>
+            </div>
+
+            <div class="test-section">
+                <h2>📤 Social Sharing Component</h2>
+                <div class="test-content">
+                    <p><strong>Expected:</strong> Social sharing buttons below</p>
+                    <div id="social-sharing"></div>
+                    <div id="social-status" class="status">Checking...</div>
+                </div>
+            </div>
+
+            <div class="test-section">
+                <h2>🔗 Related Articles Component</h2>
+                <div class="test-content">
+                    <p><strong>Expected:</strong> Related article recommendations below</p>
+                    <div id="related-articles"></div>
+                    <div id="related-status" class="status">Checking...</div>
+                </div>
+            </div>
+
+            <div class="test-section">
+                <h2>📊 Component Status</h2>
+                <div class="test-content">
+                    <div id="overall-status">Loading components...</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Website Components JavaScript -->
+    <script src="/components/site-search.js"></script>
+    <script src="/components/related-articles.js"></script>
+    <script src="/components/social-sharing.js"></script>
+
+    <!-- Test Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 Testing website components...');
+            
+            // Test status tracking
+            const results = {
+                search: false,
+                social: false,
+                related: false
+            };
+
+            // Check search component
+            setTimeout(() => {
+                const searchButton = document.querySelector('#search-button');
+                const searchOverlay = document.querySelector('#search-overlay');
+                
+                if (searchButton && searchOverlay) {
+                    results.search = true;
+                    document.getElementById('search-status').innerHTML = '✅ Search component loaded successfully';
+                    document.getElementById('search-status').className = 'status success';
+                } else {
+                    document.getElementById('search-status').innerHTML = '❌ Search component failed to load';
+                    document.getElementById('search-status').className = 'status error';
+                }
+                
+                updateOverallStatus();
+            }, 1000);
+
+            // Check social sharing component
+            setTimeout(() => {
+                const socialButtons = document.querySelector('#social-sharing .social-sharing-buttons');
+                
+                if (socialButtons && socialButtons.children.length > 0) {
+                    results.social = true;
+                    document.getElementById('social-status').innerHTML = '✅ Social sharing component loaded successfully';
+                    document.getElementById('social-status').className = 'status success';
+                } else {
+                    document.getElementById('social-status').innerHTML = '❌ Social sharing component failed to load';
+                    document.getElementById('social-status').className = 'status error';
+                }
+                
+                updateOverallStatus();
+            }, 1500);
+
+            // Check related articles component
+            setTimeout(() => {
+                const relatedWidget = document.querySelector('#related-articles .related-articles-widget');
+                
+                if (relatedWidget) {
+                    results.related = true;
+                    document.getElementById('related-status').innerHTML = '✅ Related articles component loaded successfully';
+                    document.getElementById('related-status').className = 'status success';
+                } else {
+                    document.getElementById('related-status').innerHTML = '❌ Related articles component failed to load';
+                    document.getElementById('related-status').className = 'status error';
+                }
+                
+                updateOverallStatus();
+            }, 2000);
+
+            function updateOverallStatus() {
+                const successCount = Object.values(results).filter(Boolean).length;
+                const totalCount = Object.keys(results).length;
+                
+                let statusHTML = `<h3>Overall Status: ${successCount}/${totalCount} components working</h3>`;
+                
+                if (successCount === totalCount) {
+                    statusHTML += '<div class="status success">🎉 All components are working perfectly!</div>';
+                    statusHTML += '<p><strong>Next steps:</strong></p>';
+                    statusHTML += '<ul>';
+                    statusHTML += '<li>✅ Test search functionality (Ctrl/Cmd+K)</li>';
+                    statusHTML += '<li>✅ Click social sharing buttons</li>';
+                    statusHTML += '<li>✅ Check related articles recommendations</li>';
+                    statusHTML += '<li>✅ Deploy to production</li>';
+                    statusHTML += '</ul>';
+                } else {
+                    statusHTML += '<div class="status error">⚠️ Some components failed to load</div>';
+                    statusHTML += '<p>Check browser console for error details.</p>';
+                }
+                
+                document.getElementById('overall-status').innerHTML = statusHTML;
+            }
+
+            // Console debugging
+            console.log('Components initialized:', {
+                search: !!window.siteSearch,
+                social: !!window.socialSharing,
+                related: !!window.relatedArticles
+            });
+        });
+    </script>
+</body>
+</html>
