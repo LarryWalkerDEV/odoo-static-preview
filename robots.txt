@@ -1,4 +1,15 @@
 User-agent: *
 Allow: /
+Crawl-delay: 1
 
+# Prevent crawling of www subdomain to avoid duplicate content
+User-agent: *
+Disallow: https://www.odoo-experten-deutschland.de/
+
+# Sitemap location (canonical domain only)
 Sitemap: https://odoo-experten-deutschland.de/sitemap.xml
+
+# Additional directives for search engines
+Host: odoo-experten-deutschland.de
+# RSS Feed
+Sitemap: https://odoo-experten-deutschland.de/rss.xml
