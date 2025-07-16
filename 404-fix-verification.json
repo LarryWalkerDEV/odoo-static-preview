@@ -1,0 +1,152 @@
+{
+  "totalErrors": 29,
+  "fixed": 23,
+  "missingFiles": 6,
+  "needsAttention": 0,
+  "details": {
+    "fixed": [
+      {
+        "originalUrl": "https://www.odoo-experten-deutschland.de/odoo-hosting/odoo-sh-vergleich.html",
+        "fixType": "www-to-non-www redirect",
+        "targetPath": "/odoo-hosting/odoo-sh-vergleich.html"
+      },
+      {
+        "originalUrl": "https://www.odoo-experten-deutschland.de/odoo-hosting/hosting-sicherheit.html",
+        "fixType": "www-to-non-www redirect",
+        "targetPath": "/odoo-hosting/hosting-sicherheit.html"
+      },
+      {
+        "originalUrl": "https://www.odoo-experten-deutschland.de/odoo/odoo-crm-grundlagen.html",
+        "fixType": "www-to-non-www redirect",
+        "targetPath": "/odoo/odoo-crm-grundlagen.html"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo/odoo-training",
+        "fixType": "missing .html redirect",
+        "targetPath": "/odoo/odoo-training.html"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo/odoo-module",
+        "fixType": "missing .html redirect",
+        "targetPath": "/odoo/odoo-module.html"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo/odoo-crm",
+        "fixType": "missing .html redirect",
+        "targetPath": "/odoo/odoo-crm.html"
+      },
+      {
+        "originalUrl": "https://www.odoo-experten-deutschland.de/odoo-19/ki-integration.html",
+        "fixType": "www-to-non-www redirect",
+        "targetPath": "/odoo-19/ki-integration.html"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo/odoo-logistics.html",
+        "fixType": "file exists",
+        "targetPath": "/odoo/odoo-logistics.html"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo-hosting/hosting-odoo-hosting-deutschland-dsgvo.html",
+        "fixType": "file exists",
+        "targetPath": "/odoo-hosting/hosting-odoo-hosting-deutschland-dsgvo.html"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo-hosting/best-odoo-hosting-provider.html",
+        "fixType": "file exists",
+        "targetPath": "/odoo-hosting/best-odoo-hosting-provider.html"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo/19-odoo-19-system-requirements.html",
+        "fixType": "file exists",
+        "targetPath": "/odoo/19-odoo-19-system-requirements.html"
+      },
+      {
+        "originalUrl": "https://www.odoo-experten-deutschland.de/odoo-19/",
+        "fixType": "www-to-non-www redirect",
+        "targetPath": "/odoo-19/"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo-19/19-odoo-19-wettbewerbsvorteil.html",
+        "fixType": "file exists",
+        "targetPath": "/odoo-19/19-odoo-19-wettbewerbsvorteil.html"
+      },
+      {
+        "originalUrl": "https://www.odoo-experten-deutschland.de/odoo/19-odoo-19-ai-server-actions.html",
+        "fixType": "www-to-non-www redirect",
+        "targetPath": "/odoo/19-odoo-19-ai-server-actions.html"
+      },
+      {
+        "originalUrl": "https://www.odoo-experten-deutschland.de/odoo-hosting/",
+        "fixType": "www-to-non-www redirect",
+        "targetPath": "/odoo-hosting/"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo-19/19-odoo-19-industry-templates.html",
+        "fixType": "file exists",
+        "targetPath": "/odoo-19/19-odoo-19-industry-templates.html"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo/",
+        "fixType": "file exists",
+        "targetPath": "/odoo/"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo-hosting/hosting-odoo-email-hosting-integration.html",
+        "fixType": "file exists",
+        "targetPath": "/odoo-hosting/hosting-odoo-email-hosting-integration.html"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo-hosting/odoo-chatbot-hosting-ai-chat.html",
+        "fixType": "file exists",
+        "targetPath": "/odoo-hosting/odoo-chatbot-hosting-ai-chat.html"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo-hosting/hosting-odoo-ai-costs-ki-preise.html",
+        "fixType": "file exists",
+        "targetPath": "/odoo-hosting/hosting-odoo-ai-costs-ki-preise.html"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo-hosting/odoo-selbst-hosten-anleitung.html",
+        "fixType": "file exists",
+        "targetPath": "/odoo-hosting/odoo-selbst-hosten-anleitung.html"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo-hosting/odoo-ai-website-ki-integration.html",
+        "fixType": "file exists",
+        "targetPath": "/odoo-hosting/odoo-ai-website-ki-integration.html"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo-19/odoo-19-banking-accounting.html",
+        "fixType": "file exists",
+        "targetPath": "/odoo-19/odoo-19-banking-accounting.html"
+      }
+    ],
+    "needsAttention": [],
+    "missingFiles": [
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo/dsgvo-compliance-guide",
+        "expectedFile": "odoo/dsgvo-compliance-guide.html"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo/odoo-beratung",
+        "expectedFile": "odoo/odoo-beratung.html"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo/odoo-dashboard",
+        "expectedFile": "odoo/odoo-dashboard.html"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo-hosting/odoo-hosting-optionen",
+        "expectedFile": "odoo-hosting/odoo-hosting-optionen.html"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo-hosting/odoo-managed-services",
+        "expectedFile": "odoo-hosting/odoo-managed-services.html"
+      },
+      {
+        "originalUrl": "https://odoo-experten-deutschland.de/odoo/odoo-dsgvo-compliance",
+        "expectedFile": "odoo/odoo-dsgvo-compliance.html"
+      }
+    ]
+  }
+}

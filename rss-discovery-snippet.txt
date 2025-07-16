@@ -1,0 +1,4 @@
+
+<!-- RSS Auto-Discovery -->
+<!-- Add this to the <head> section of your index.html and other main pages -->
+<link rel="alternate" type="application/rss+xml" title="Odoo Experten Deutschland RSS Feed" href="https://odoo-experten-deutschland.de/rss.xml" />
