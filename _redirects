@@ -6,6 +6,11 @@ https://www.odoo-experten-deutschland.de/* https://odoo-experten-deutschland.de/
 # Favicon redirect (SVG is the modern format)
 /favicon.ico /favicon.svg 301
 
+# Handle index pages explicitly
+/odoo /odoo/index.html 200
+/odoo-19 /odoo-19/index.html 200
+/odoo-hosting /odoo-hosting/index.html 200
+
 # Fix 404 errors - Missing .html extensions for Odoo pages
 /odoo/19-odoo-19-ai-server-actions /odoo/19-odoo-19-ai-server-actions.html 301
 /odoo/19-odoo-19-ai-vorteile-nutzen /odoo/19-odoo-19-ai-vorteile-nutzen.html 301
