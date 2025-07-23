@@ -63,6 +63,11 @@
       "source": "/favicon.ico",
       "destination": "/favicon.svg",
       "permanent": true
+    },
+    {
+      "source": "/odoo-19/ki-integration",
+      "destination": "/odoo-19/19-odoo-19-ki-features-business.html",
+      "permanent": true
     }
   ]
 }
