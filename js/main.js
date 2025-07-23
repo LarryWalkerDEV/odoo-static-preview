@@ -32,19 +32,41 @@ function initCookieConsent() {
 
 // Load popular articles for footer
 async function loadPopularArticles() {
+    const popularArticlesList = document.getElementById('popular-articles');
+    
+    if (!popularArticlesList) return;
+    
+    // Fallback to static popular articles to avoid broken links
+    const staticPopularArticles = [
+        { title: 'Was ist Odoo?', url: '/odoo/was-ist-odoo.html' },
+        { title: 'Odoo Kosten und Preise', url: '/odoo/odoo-kosten.html' },
+        { title: 'Odoo vs SAP Vergleich', url: '/odoo/odoo-vs-sap-vergleich.html' },
+        { title: 'Odoo Hosting Deutschland', url: '/odoo-hosting/odoo-hosting-deutschland.html' },
+        { title: 'Odoo 19 Best Practices', url: '/odoo-19/19-odoo-19-best-practices.html' }
+    ];
+    
     try {
+        // Try to load from Supabase first
         const articles = await supabaseClient.getArticles({ limit: 5 });
-        const popularArticlesList = document.getElementById('popular-articles');
         
-        if (popularArticlesList && articles.length > 0) {
+        if (articles && articles.length > 0) {
             popularArticlesList.innerHTML = articles.map(article => `
                 <li><a href="/${article.category}/${article.url_slug}.html" class="footer-link">
                     ${article.title}
                 </a></li>
             `).join('');
+        } else {
+            throw new Error('No articles from database');
         }
     } catch (error) {
-        console.error('Error loading popular articles:', error);
+        console.error('Error loading popular articles from database, using fallback:', error);
+        
+        // Use static fallback articles
+        popularArticlesList.innerHTML = staticPopularArticles.map(article => `
+            <li><a href="${article.url}" class="footer-link">
+                ${article.title}
+            </a></li>
+        `).join('');
     }
 }
 
