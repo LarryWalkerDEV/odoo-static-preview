@@ -30,6 +30,24 @@
           "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://tbppogohivsxgiavbnvp.supabase.co; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://tbppogohivsxgiavbnvp.supabase.co; font-src 'self'; connect-src 'self' https://tbppogohivsxgiavbnvp.supabase.co"
         }
       ]
+    },
+    {
+      "source": "/js/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/css/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
     }
   ],
   "rewrites": [
