@@ -45,29 +45,15 @@ async function loadPopularArticles() {
         { title: 'Odoo 19 Best Practices', url: '/odoo-19/19-odoo-19-best-practices.html' }
     ];
     
-    try {
-        // Try to load from Supabase first
-        const articles = await supabaseClient.getArticles({ limit: 5 });
-        
-        if (articles && articles.length > 0) {
-            popularArticlesList.innerHTML = articles.map(article => `
-                <li><a href="/${article.category}/${article.url_slug}.html" class="footer-link">
-                    ${article.title}
-                </a></li>
-            `).join('');
-        } else {
-            throw new Error('No articles from database');
-        }
-    } catch (error) {
-        console.error('Error loading popular articles from database, using fallback:', error);
-        
-        // Use static fallback articles
-        popularArticlesList.innerHTML = staticPopularArticles.map(article => `
-            <li><a href="${article.url}" class="footer-link">
-                ${article.title}
-            </a></li>
-        `).join('');
-    }
+    // Use only static articles to ensure no broken links
+    // Database loading disabled temporarily to prevent 404 errors
+    console.log('Using static popular articles to prevent broken links');
+    
+    popularArticlesList.innerHTML = staticPopularArticles.map(article => `
+        <li><a href="${article.url}" class="footer-link">
+            ${article.title}
+        </a></li>
+    `).join('');
 }
 
 // Smooth scrolling for anchor links
